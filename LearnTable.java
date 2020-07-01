@@ -41,14 +41,10 @@ public class LearnTable {
         }
         int a=Collections.min(allElements);
 		System.out.println("Min value: " + a);
-        
-          if(a==30) {
-		  driver.findElementByXPath("(//input[@name='vital'])[3]").click(); 
-		  System.out.println("vital task for the least completed progress is selected: " +
+ 		driver.findElementByXPath("//td[contains(text(),'"+ a +"')]/following-sibling::td/input").click();
+		System.out.println("vital task for the least completed progress is selected: " +
 		  driver.findElementByXPath("(//input[@name='vital'])[3]").isSelected());
-		  
-		  }
-		  
+	   
 		      
 	}
 
